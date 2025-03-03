@@ -1,4 +1,4 @@
-﻿name: Cosmic Release
+name: Cosmic Release
 
 on:
   push:
@@ -23,7 +23,7 @@ jobs:
         uses: goreleaser/goreleaser-action@v4
         with:
           version: latest
-          args: release --rm-dist
+          args: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COSMIC_SIGNING_KEY: ${{ secrets.COSMIC_SIGNING_KEY }}
